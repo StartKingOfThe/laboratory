@@ -22,15 +22,17 @@ namespace HelloWorldGit
             else {
 
                 StreamReader reader = new StreamReader("times.txt");
-                
+
+                Console.WriteLine("All dates from file : ");
+
                 while (reader.Peek() != -1)
                 {
 
                     text = reader.ReadLine();
-
+                    Console.WriteLine("Date: " + text);
                 }
                 reader.Close();
-                Console.WriteLine("Last date: " + text);
+            
             }
              
             StreamWriter writer = new StreamWriter("times.txt", true);
